@@ -4,14 +4,8 @@ import AuthLayouts from "../components/Layouts/AuthLayouts";
 
 export default function LoginPage() {
   return (
-    <AuthLayouts title="Login">
+    <AuthLayouts title="Login" type="login">
       <FormLogin />
-      <p className="text-sm mt-5 text-center">
-        Don't have an account?{" "}
-        <Link to="/register" className="text-blue-500">
-          Register
-        </Link>
-      </p>
     </AuthLayouts>
   );
 }
