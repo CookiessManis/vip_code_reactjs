@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import FormRegister from "../components/Fragments/FormRegister";
 import AuthLayouts from "../components/Layouts/AuthLayouts";
 

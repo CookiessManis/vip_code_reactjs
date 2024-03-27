@@ -1,8 +1,6 @@
-import { Fragment, useContext, useEffect, useRef, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import CardProduct from "../components/Fragments/CardProduct";
-import Button from "../components/Elements/Button";
 import { getProducts } from "../services/product.service";
-import { getUsername } from "../services/auth.service";
 import { useLogin } from "../hooks/useLogin";
 import TableCart from "../components/Fragments/TableCart";
 import Navbar from "../components/Layouts/Navbar";
