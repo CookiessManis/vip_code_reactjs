@@ -1,17 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RegisterPage from "./Pages/register.jsx";
-import LoginPage from "./Pages/Login.jsx";
-import ErrorPage from "./Pages/404.jsx";
-import ProductPage from "./Pages/products.jsx";
-import ProfilePage from "./Pages/profile.jsx";
-import DetailProductPage from "./Pages/detailProduct.jsx";
+import RegisterPage from "./pages/Register.jsx";
+import LoginPage from "./pages/Login.jsx";
+import ErrorPage from "./pages/404.jsx";
+import ProductPage from "./pages/Products.jsx";
+import ProfilePage from "./pages/Profile.jsx";
+import DetailProductPage from "./pages/DetailProduct.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
-import Navbar from "./components/Layouts/Navbar.jsx";
-import DarkModeContextProvide from "./context/DarkMode.jsx";
+import DarkModeContextProvider from "./context/DarkMode.jsx";
 import { TotalPriceProvider } from "./context/TotalPriceContext.jsx";
 
 const router = createBrowserRouter([
@@ -46,11 +45,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       {/* <Navbar /> */}
-      <DarkModeContextProvide>
+      <DarkModeContextProvider>
         <TotalPriceProvider>
           <RouterProvider router={router} />
         </TotalPriceProvider>
-      </DarkModeContextProvide>
+      </DarkModeContextProvider>
     </Provider>
   </React.StrictMode>
 );
